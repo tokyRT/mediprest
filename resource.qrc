@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>img/medecinBtn.png</file>
+        <file>img/patientBtn.png</file>
+        <file>img/Feminin.ico</file>
+        <file>img/Masculin.png</file>
+        <file>img/ajoutMed.png</file>
+        <file>img/removeMed.png</file>
+        <file>img/ajoutTrait.png</file>
+        <file>img/edit.png</file>
+        <file>img/traitementBtn.png</file>
+        <file>img/ajoutPat.png</file>
+        <file>img/editPat.png</file>
+        <file>img/removePat.png</file>
+        <file>img/editMed.png</file>
+        <file>img/editTrait.png</file>
+        <file>img/removeTrait.png</file>
+        <file>img/medecin.png</file>
+        <file>img/patient.png</file>
+        <file>img/traitement.png</file>
+        <file>img/etatPrestation.png</file>
+        <file>img/logo.png</file>
+        <file>img/splash1.png</file>
+        <file>img/splash2.jpg</file>
+        <file>img/system-shutdown.ico</file>
+        <file>img/texte.png</file>
+        <file>img/welcomeBtn.png</file>
+        <file>img/qt-linguist.ico</file>
+        <file>img/qt-creator.ico</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VoirTrait</class>
+ <widget class="QWidget" name="VoirTrait">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1001</width>
+    <height>704</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1001</width>
+    <height>704</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1001</width>
+    <height>704</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#VoirTrait{
+background-color: qradialgradient(spread:pad, cx:0.494318, cy:0.5, radius:0.859, fx:0.5, fy:0.5, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(222, 227, 241, 255));
+}
+#medTable{
+	selection-background-color:rgb(3, 225, 133);
+	alternate-background-color: rgb(240, 247, 255);
+	selection-color: white;
+	border: none;
+}
+#medTable QHeaderView::section{
+background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0.00568182, stop:0 rgba(9, 87, 94, 255), stop:1 rgba(15, 174, 182, 255));
+color: white;
+border: none;
+font-weight: bold;
+}
+*{
+font: 75 11pt &quot;Calibri&quot;;
+}</string>
+  </property>
+  <widget class="QLabel" name="numPat">
+   <property name="geometry">
+    <rect>
+     <x>136</x>
+     <y>61</y>
+     <width>72</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 20pt &quot;Quantify&quot;;
+color:rgb(232, 54, 54);
+font: 75 20pt &quot;Quicksand Bold&quot;;</string>
+   </property>
+   <property name="text">
+    <string>PAT-4</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>10</y>
+     <width>531</width>
+     <height>44</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(13, 111, 122);
+font: 75 26pt &quot;Calibri&quot;;</string>
+   </property>
+   <property name="text">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Calibri'; font-size:26pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Quantify'; font-size:28pt; font-weight:400;&quot;&gt;Liste des medecins consultés&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="medTable">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>210</y>
+     <width>751</width>
+     <height>391</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <column>
+    <property name="text">
+     <string>Medecin</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Matricule</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Taux journalier</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Traitement</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Date de consultation</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QGroupBox" name="medDetailsGroup">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>210</y>
+     <width>231</width>
+     <height>401</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#medDetailsGroup{
+background-color: qlineargradient(spread:pad, x1:0.494, y1:0.960227, x2:0.465636, y2:0, stop:0 rgba(49, 176, 235, 255), stop:1 rgba(255, 255, 255, 255));
+background-color: qlineargradient(spread:pad, x1:0, y1:0.989, x2:1, y2:0, stop:0 rgba(183, 212, 255, 255), stop:1 rgba(255, 255, 255, 255));
+background-color: qlineargradient(spread:pad, x1:0, y1:0.989, x2:1, y2:0, stop:0 rgba(222, 237, 255, 255), stop:1 rgba(255, 255, 255, 255));
+background-color:qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(144, 250, 197, 255), stop:1 rgba(132, 165, 253, 255)) ;
+
+}</string>
+   </property>
+   <property name="title">
+    <string>Details sur le medecin</string>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>211</width>
+      <height>150</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="infoMedLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="pseudoLbl">
+         <property name="styleSheet">
+          <string notr="true">text-align: center;
+font-size: 15pt;</string>
+         </property>
+         <property name="text">
+          <string>Dr User</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nom:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="nomLbl">
+         <property name="text">
+          <string>LOREM LIPSUM</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Prénom(s):&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="prenomLbl">
+         <property name="text">
+          <string>User</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Numero:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLabel" name="matriculeLbl">
+         <property name="text">
+          <string>MED-1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Spécialité:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLabel" name="specLbl">
+         <property name="text">
+          <string>Generaliste</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Taux:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLabel" name="tauxLbl">
+         <property name="text">
+          <string>10000</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="numPat_3">
+   <property name="geometry">
+    <rect>
+     <x>31</x>
+     <y>61</y>
+     <width>99</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 20pt &quot;Quantify&quot;;
+color:rgb(13, 111, 122);</string>
+   </property>
+   <property name="text">
+    <string>Patient: </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="nomPat">
+   <property name="geometry">
+    <rect>
+     <x>214</x>
+     <y>61</y>
+     <width>255</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 20pt &quot;Quantify&quot;;
+color:rgb(232, 54, 54);
+font: 75 20pt &quot;Quicksand Bold&quot;;</string>
+   </property>
+   <property name="text">
+    <string>RAKOTO JEAN Paul</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>660</y>
+     <width>269</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QPushButton" name="printMedtable">
+      <property name="minimumSize">
+       <size>
+        <width>161</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#printMedtable{
+border:none;
+border: 1px solid qlineargradient(spread:pad, x1:1, y1:0, x2:0, y2:1, stop:0 rgba(255, 59, 59, 255), stop:1 rgba(98, 202, 214, 255));
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(255, 59, 59, 255), stop:1 rgba(98, 202, 214, 255));
+color: rgb(232, 54, 54);
+color: white;
+font-weight: bold;
+}
+#printMedtable:hover{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(255, 34, 34, 255), stop:1 rgba(55, 198, 214, 255));
+}</string>
+      </property>
+      <property name="text">
+       <string>Exporter en PDF</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="cancelBtn">
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#cancelBtn{
+border:none;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(11, 102, 112, 255), stop:1 rgba(18, 185, 200, 255));
+color: rgb(232, 54, 54);
+color: white;
+font-weight: bold;
+}
+#cancelBtn:hover{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(9, 87, 94, 255), stop:1 rgba(15, 174, 182, 255));
+}</string>
+      </property>
+      <property name="text">
+       <string>Fermer</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>100</y>
+     <width>411</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout_2">
+    <item row="1" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Medecins consultés:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="effectif">
+      <property name="styleSheet">
+       <string notr="true">font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>Nombre total de jours:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLabel" name="totalJours">
+      <property name="styleSheet">
+       <string notr="true">font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>20</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Coup  total:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLabel" name="coupTotal">
+      <property name="styleSheet">
+       <string notr="true">font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>20000 Ar</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_13">
+      <property name="text">
+       <string>Période:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="critereLbl">
+        <property name="text">
+         <string>Entre 20/01/20 et 19/01/20</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="critereBtn">
+        <property name="minimumSize">
+         <size>
+          <width>70</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#critereBtn{
+border:none;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(11, 102, 112, 255), stop:1 rgba(18, 185, 200, 255));
+color: rgb(232, 54, 54);
+color: white;
+font-weight: bold;
+}
+#critereBtn:hover{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(9, 87, 94, 255), stop:1 rgba(15, 174, 182, 255));
+}</string>
+        </property>
+        <property name="text">
+         <string>Modifier</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="consuMedBtn">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>100</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>70</width>
+     <height>25</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#consuMedBtn{
+border:none;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(11, 102, 112, 255), stop:1 rgba(18, 185, 200, 255));
+color: rgb(232, 54, 54);
+color: white;
+font-weight: bold;
+}
+#consuMedBtn:hover{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(9, 87, 94, 255), stop:1 rgba(15, 174, 182, 255));
+}</string>
+   </property>
+   <property name="text">
+    <string>Consulter un medecin</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

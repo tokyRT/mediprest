@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>prestDialog</class>
+ <widget class="QDialog" name="prestDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1014</width>
+    <height>582</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1014</width>
+    <height>582</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1014</width>
+    <height>582</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+font: 75 11pt &quot;Calibri&quot;;
+}
+#prestDialog{
+background-color: qradialgradient(spread:pad, cx:0.494318, cy:0.5, radius:0.859, fx:0.5, fy:0.5, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(222, 227, 241, 255));
+}
+#prestTable{
+	selection-background-color:rgb(3, 225, 133);
+	alternate-background-color: rgb(240, 247, 255);
+	selection-color: white;
+	border: none;
+}
+#prestTable QHeaderView::section{
+background-color: qlineargradient(spread:pad, x1:0.505, y1:1, x2:0.477, y2:0, stop:0 rgba(248, 160, 8, 255), stop:1 rgba(255, 220, 147, 255));
+color: white;
+border: none;
+font-weight: bold;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_15">
+     <item>
+      <widget class="QLabel" name="label_25">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; color:#0d6f7a;&quot;&gt;Edition d'un etat des prestations &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_6">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_22">
+       <property name="text">
+        <string>Medecin: </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="listeMed">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_23">
+       <property name="text">
+        <string>Année:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="yearPrest">
+       <property name="maximumSize">
+        <size>
+         <width>70</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_16">
+       <item>
+        <widget class="QLabel" name="label_27">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600; color:#e83636;&quot;&gt;Total: &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="totalPrest">
+         <property name="styleSheet">
+          <string notr="true">font-size: 15pt;
+font-weight: bold;
+color: #e83636;</string>
+         </property>
+         <property name="text">
+          <string>12</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QTableWidget" name="prestTable">
+         <property name="minimumSize">
+          <size>
+           <width>280</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>400</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <row>
+          <property name="text">
+           <string>Janv.</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>fevr.</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>Mars</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>Avr.</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>Mai</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>Juin</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>Juil.</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>Aout</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>Sept</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>Oct</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>Nov</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>Dec</string>
+          </property>
+         </row>
+         <column>
+          <property name="text">
+           <string>Patients</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Prestation</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QFrame" name="allPrestHisto">
+       <property name="minimumSize">
+        <size>
+         <width>700</width>
+         <height>400</height>
+        </size>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_11"/>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QPushButton" name="printPrest">
+         <property name="minimumSize">
+          <size>
+           <width>161</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#printPrest{
+border:none;
+border: 1px solid qlineargradient(spread:pad, x1:1, y1:0, x2:0, y2:1, stop:0 rgba(255, 59, 59, 255), stop:1 rgba(98, 202, 214, 255));
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(255, 59, 59, 255), stop:1 rgba(98, 202, 214, 255));
+color: rgb(232, 54, 54);
+color: white;
+font-weight: bold;
+}
+#printPrest:hover{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(255, 34, 34, 255), stop:1 rgba(55, 198, 214, 255));
+}</string>
+         </property>
+         <property name="text">
+          <string>Exporter en PDF</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="cancelBtn">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#cancelBtn{
+border:none;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(11, 102, 112, 255), stop:1 rgba(18, 185, 200, 255));
+color: rgb(232, 54, 54);
+color: white;
+font-weight: bold;
+}
+#cancelBtn:hover{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(9, 87, 94, 255), stop:1 rgba(15, 174, 182, 255));
+}</string>
+         </property>
+         <property name="text">
+          <string>Fermer</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
